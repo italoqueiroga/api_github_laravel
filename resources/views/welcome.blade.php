@@ -12,7 +12,7 @@
 <body>
 
 <div class="container">
-    <div class="row mb-5 justify-content-center">
+    <div class="row mb-4 mt-2 justify-content-center">
         <div class="col-6">
             <h1>Busca de usuário do Github</h1>
 
@@ -29,6 +29,7 @@
 
 
     @if($search)
+    @if($user)
 
     <div class="row justify-content-evenly">
         <div class="col-3">
@@ -79,6 +80,17 @@
         </div>
     </div>
 
+    @else
+
+    <div class="row justify-content-evenly">
+        <div class="col-6">
+            <div class="alert alert-warning" role="alert">
+                Procurei por <strong>{{ $search }}</strong>, mas não encontrei :/
+            </div>
+        </div>
+    </div>
+
+    @endif
     @endif
 
 </div>

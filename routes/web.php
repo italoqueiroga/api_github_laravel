@@ -31,6 +31,10 @@ Route::get('/', function () {
         curl_close($ch);
         $resposta = json_decode($response);
 
+        if (isset($resposta->message) && $resposta->message == 'Not Found') {
+            $resposta = null;
+        }
+
     } else {
         $resposta = '';
     }
