@@ -19,6 +19,12 @@
 ## Guia de uso
 Digite o nome do usuário para pesquisar no Github. Se o usuário existir, serão mostradas as informações do perfil.
 
+### O teste
+Construir uma aplicação em PHP utilizando o Framework Laravel com os seguintes requisitos:
+1 - Consumir a api do github(não utilizar GuzzleHttp)
+1.1 - Posibilitar consultar por nome de usuario
+1.2 - Criar uma view simples para exibir os dados do usuário consultado
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
