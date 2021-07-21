@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,31 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $search = request('busca');
-
-    if($search) {
-        $ch = curl_init();
-        curl_setopt_array($ch, [
-            CURLOPT_URL => "https://api.github.com/users/" . $search,
-            CURLOPT_HTTPHEADER  => [
-                "Accept: application/vnd.github.v3+json",
-                "Content-Type: text/plain",
-                "User-Agent: mfmfneko"
-            ],
-            CURLOPT_RETURNTRANSFER => true,
-        ]);
-        $response = curl_exec($ch);
-        curl_close($ch);
-        $resposta = json_decode($response);
-
-        if (isset($resposta->message) && $resposta->message == 'Not Found') {
-            $resposta = null;
-        }
-
-    } else {
-        $resposta = '';
-    }
-
-    return view('welcome',['user' => $resposta, 'search' => $search]);
-});
+Route::get('/', [ReqController::class, 'index']);

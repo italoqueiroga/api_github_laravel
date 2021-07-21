@@ -17,8 +17,8 @@
             <h1>Busca de usuário do Github</h1>
 
             <form action="/" method="get" autocomplete="off">
-                <input type="text" name="busca" class="form-control mb-3" placeholder="usuário a buscar">
-                <button type="submit" class="btn btn-lg btn-primary btn-block col-6 mx-auto" style="display: block;">Buscar</button>
+                <input type="text" name="busca" class="form-control mb-3" style="line-height: 30px;" placeholder="usuário a buscar">
+                <button type="submit" class="btn btn-primary btn-block col-4 mx-auto" style="display: block;">Buscar</button>
             </form>
 
         </div>
