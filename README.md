@@ -13,6 +13,7 @@
 * No terminal execute os seguintes comandos:
 	* _composer dump-autoload_
 	* _composer install_
+	* _php artisan key:generate_
 	* _php artisan serve_
 * Acesse http://127.0.0.1:8000
 
